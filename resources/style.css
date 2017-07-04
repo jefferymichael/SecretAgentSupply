@@ -155,7 +155,7 @@ footer {
 
 /********** Media Queries **********/
 
-/* Laptops */
+/* Tablet */
 @media only screen and (max-width: 1024px) {
      body {
         font-size: 16px;
@@ -170,19 +170,23 @@ footer {
         display: none;
     }
 
-}
-   
-/* Tablets */
-@media only screen and (max-width 768px) and (min-width: 321px) {
-    .mobile-nav {
-        display: block;
-        text-align: center;
-    } 
-}
+    .product-glasses {
+        display: none;
+    }
 
+    .products {
+        margin: 2rem 3rem; 
+    }
+
+    .business-info {
+        display: flex;
+        justify-content: space-between;  
+    }
+
+}
 
 /* Phones */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 470px) {
     .company .container {
         margin: 0 auto;
     }
@@ -226,7 +230,21 @@ footer {
         align-content: center;
     }
 
-    .products .product-image {
+    .product-pen {
         width: 90%;
     }
+
+    .product-watch {
+        display: none;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .info .title {
+        display: block;
+        width: 15rem;
+    }
+
 }
