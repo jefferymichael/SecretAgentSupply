@@ -1,3 +1,7 @@
+body {
+    font-size: 18px;
+    margin: 0;
+}
 .container {
     font-family: Helvetica;
     max-width: 960px;
@@ -76,6 +80,10 @@ nav {
     color: white;
 }
 
+.mobile-nav {
+    display: none;
+}
+
 /** Products **/
 .products {
     display: flex;
@@ -90,6 +98,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
 }
 
 .product-image img {
@@ -106,15 +115,13 @@ img {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 0.5em;
+    padding: 0.9em;
 }
 
 .business-info {
     display: flex;
     justify-content: space-between;  
-    margin: 3em 0 0 0;
-    background-color: black;
-    color: white;
+    margin: 3em 0 0 0; 
 }
 
 .info .title {
@@ -122,10 +129,13 @@ img {
     background-color: black;
     color: white;
     padding: 1em 2em;
-
+    width: 15rem;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 /** Footer **/
+
 
 footer {
     background-color: black;
@@ -134,4 +144,89 @@ footer {
     margin-top: 4em;
     padding: 5em 0px;
     height: 5rem;
+}
+
+.copyright {
+    padding: 5em 0 5em 4em;
+    margin-top: 5em;
+    background-color: black;
+    font-family: Helvetica;
+}
+
+/********** Media Queries **********/
+
+/* Laptops */
+@media only screen and (max-width: 1024px) {
+     body {
+        font-size: 16px;
+    }
+
+    .mobile-nav {
+        display: block;
+        text-align: center;
+    } 
+
+    .nav-container {
+        display: none;
+    }
+
+}
+   
+/* Tablets */
+@media only screen and (max-width 768px) and (min-width: 321px) {
+    .mobile-nav {
+        display: block;
+        text-align: center;
+    } 
+}
+
+
+/* Phones */
+@media only screen and (max-width: 480px) {
+    .company .container {
+        margin: 0 auto;
+    }
+    
+    .main-banner {
+        height: 15rem;
+        padding-left: 0;
+    }
+
+    .headline {
+        text-align: left;
+        justify-content: flex-start;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 2.5em;
+    }
+
+   .main-banner .headline {
+        height: 2rem;
+        align-content: left;
+    }
+
+    .headline h4 {
+        font-size: 0.77rem;
+        font-weight: bold;
+        font-family: Helvetica; 
+        margin: 0;
+        padding-bottom: 1rem;   
+    }
+
+    .headline h1 {
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: Helvetica; 
+    }
+    
+    body {
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: Helvetica;
+        align-content: center;
+    }
+
+    .products .product-image {
+        width: 90%;
+    }
 }
